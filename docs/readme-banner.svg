@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">LS — Line Sorter Helper</title>
+  <desc id="desc">White LS wordmark with the caption for QE | Observer and a white conveyor path on a dark background.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1420"/>
+      <stop offset="1" stop-color="#1d2938"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" opacity=".13"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="340" rx="26" fill="url(#background)"/>
+  <rect width="1200" height="340" rx="26" fill="url(#dots)"/>
+  <rect x="13" y="13" width="1174" height="314" rx="17" fill="none" stroke="#ffffff" stroke-opacity=".42" stroke-width="2"/>
+  <path d="M44 44h70M44 44v70M1156 296h-70M1156 296v-70" fill="none" stroke="#ffffff" stroke-opacity=".72" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="77" y="171" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="130" font-weight="800" letter-spacing="-9">LS</text>
+  <text x="83" y="220" fill="#aeb8c4" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" letter-spacing="1">for QE | Observer</text>
+  <path d="M82 251h548" stroke="#ffffff" stroke-opacity=".7" stroke-width="2"/>
+  <text x="83" y="285" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="4">LINE SORTER HELPER</text>
+  <text x="507" y="285" fill="#aeb8c4" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="2">MINDUSTRY · V160+</text>
+
+  <path d="M771 223h274V90" fill="none" stroke="#ffffff" stroke-opacity=".24" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#152130" stroke="#ffffff" stroke-width="4">
+    <rect x="747" y="180" width="86" height="86" rx="13"/>
+    <rect x="859" y="180" width="86" height="86" rx="13"/>
+    <rect x="971" y="180" width="86" height="86" rx="13"/>
+    <rect x="971" y="68" width="86" height="86" rx="13"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="3" opacity=".35">
+    <rect x="758" y="191" width="64" height="64" rx="7"/>
+    <rect x="870" y="191" width="64" height="64" rx="7"/>
+    <rect x="982" y="191" width="64" height="64" rx="7"/>
+    <rect x="982" y="79" width="64" height="64" rx="7"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">
+    <text x="790" y="237">C</text>
+    <text x="902" y="237">I</text>
+    <text x="1014" y="237">S</text>
+    <text x="1014" y="125">C</text>
+  </g>
+  <path d="M1069 112l11-11-11-11" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

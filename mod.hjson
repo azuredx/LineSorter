@@ -2,6 +2,6 @@ name: "line-sorter-helper"
 displayName: "Line Sorter Helper"
 author: "azure"
 description: "Conveyor and inverted-sorter line pattern with regular sorters at turns. Toggle with the HUD button or F8."
-version: "0.4.0"
+version: "0.4.1"
 minGameVersion: 160
 hidden: true
