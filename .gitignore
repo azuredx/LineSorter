@@ -1,0 +1,8 @@
+# Local test outputs and editor files
+*.class
+*.zip
+__pycache__/
+.idea/
+.vscode/
+Thumbs.db
+desktop.ini
