@@ -8,7 +8,7 @@ A client-side JavaScript mod for Mindustry build 160 and newer. It changes the l
 
 ## ◇ What it does
 
-With a normal or titanium conveyor selected, straight lines follow a repeating pattern:
+With a normal or titanium conveyor, or the Erekir beryllium item duct selected, straight lines follow a repeating pattern:
 
 `conveyor → inverted sorter → inverted sorter`
 
@@ -20,7 +20,8 @@ The pattern starts over for each new line. It is visible while dragging and appl
 
 ## ◇ Controls
 
-- Click the small **sort on / sort off** button on the left side of the HUD, or press **F8**. The setting is saved.
+- Click the small **sort on / sort off** button on the left side of the HUD, or use the toggle key (default: **F8**). The enabled state is saved.
+- Change the toggle key in **Settings → Controls → Line Sorter Helper**. Show or hide the HUD button in **Settings → Game → Show Line Sorter button**. The key works even when the button is hidden.
 - Hold **Ctrl** while dragging diagonally to make a stepped line with turns.
 
 ## ◇ Install

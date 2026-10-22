@@ -1,21 +1,24 @@
 // Line Sorter Helper - Mindustry 160.x
 // Straight runs: conveyor, inverted sorter, inverted sorter, repeat.
 // At a bend, use a regular sorter instead.
-// F8 or the HUD button toggles the helper; the mode is saved between sessions.
+// A configurable keybind or the optional HUD button toggles the helper.
 // No tiles are changed directly; only the local player's build plans are edited.
 
 const Blocks = Packages.mindustry.content.Blocks;
 const EventType = Packages.mindustry.game.EventType;
+const KeyBind = Packages.arc.input.KeyBind;
 const KeyCode = Packages.arc.input.KeyCode;
 const Log = Packages.arc.util.Log;
 
 const settingKey = "line-sorter-helper-enabled";
+const showButtonKey = "line-sorter-helper-show-button";
+const toggleKey = KeyBind.add("line-sorter-helper-toggle", KeyCode.f8, "line-sorter-helper");
 let enabled = Core.settings.getBool(settingKey, true);
 let preview = null;
 let toggleButton = null;
 
 function supported(block){
-    return block === Blocks.conveyor || block === Blocks.titaniumConveyor;
+    return block === Blocks.conveyor || block === Blocks.titaniumConveyor || block === Blocks.duct;
 }
 
 function getInput(){
@@ -101,7 +104,7 @@ function toggleEnabled(){
 function updateToggleButton(){
     if(toggleButton == null || Vars.ui == null || Vars.ui.hudfrag == null || Vars.ui.hudGroup == null || Core.scene == null) return;
     // Rhino sees Element.visible as a boolean field, not the visible(Boolp) method.
-    toggleButton.visible = Vars.ui.hudfrag.shown;
+    toggleButton.visible = Vars.ui.hudfrag.shown && Core.settings.getBool(showButtonKey, true);
     toggleButton.setPosition(Core.scene.marginLeft + 8, Vars.ui.hudGroup.getHeight() / 2 - 12);
 }
 
@@ -178,6 +181,7 @@ Events.on(EventType.ResetEvent, e => clearPreview());
 Events.on(EventType.ClientLoadEvent, e => {
     const TextButton = Packages.arc.scene.ui.TextButton;
     const Styles = Packages.mindustry.ui.Styles;
+    Vars.ui.settings.game.checkPref(showButtonKey, true, value => updateToggleButton());
     toggleButton = new TextButton(enabled ? "sort on" : "sort off", Styles.togglet);
     toggleButton.setSize(78, 24);
     toggleButton.getLabel().setFontScale(0.7);
@@ -190,10 +194,10 @@ Events.on(EventType.ClientLoadEvent, e => {
 
 Events.run(EventType.Trigger.update, () => {
     updateToggleButton();
-    if(Vars.state.isGame() && Core.input.keyTap(KeyCode.f8)){
+    if(Vars.state.isGame() && Core.input.keyTap(toggleKey)){
         toggleEnabled();
     }
     updatePreview();
 });
 
-Log.info("[Line Sorter Helper] Loaded. Use the HUD button or F8 to toggle.");
+Log.info("[Line Sorter Helper] Loaded. Configure the toggle key in Settings > Controls.");
